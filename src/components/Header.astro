@@ -1,0 +1,229 @@
+---
+const nav = [
+  { label: "Collection", href: "/IRG/collection" },
+  { label: "Our Story", href: "/IRG/story" },
+  { label: "Shop", href: "https://shopinfinettcom.com", external: true },
+];
+---
+
+<header id="header">
+  <div class="header-inner">
+    <a href="/IRG/" class="logo" aria-label="INFINETT Home">
+      <span class="logo-symbol">∞</span>
+      <span class="logo-text">INFINETT</span>
+    </a>
+
+    <nav class="nav-links">
+      {nav.map((link) => (
+        <a
+          href={link.href}
+          class="nav-link"
+          target={link.external ? "_blank" : undefined}
+          rel={link.external ? "noopener noreferrer" : undefined}
+        >
+          {link.label}
+          {link.external && <span class="ext-arrow">↗</span>}
+        </a>
+      ))}
+      <a href="https://shopinfinettcom.com" target="_blank" rel="noopener noreferrer" class="btn-shop">
+        Shop Now
+      </a>
+    </nav>
+
+    <button class="burger" id="burger" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+
+  <div class="mobile-menu" id="mobile-menu">
+    {nav.map((link) => (
+      <a
+        href={link.href}
+        class="mobile-link"
+        target={link.external ? "_blank" : undefined}
+        rel={link.external ? "noopener noreferrer" : undefined}
+      >
+        {link.label}
+      </a>
+    ))}
+    <a href="https://shopinfinettcom.com" target="_blank" rel="noopener noreferrer" class="btn-shop mobile-cta">
+      Shop the Collection
+    </a>
+  </div>
+</header>
+
+<style>
+  header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    transition: background 0.3s ease, border-color 0.3s ease;
+    border-bottom: 1px solid transparent;
+  }
+
+  header.scrolled {
+    background: rgba(7, 7, 7, 0.95);
+    backdrop-filter: blur(20px);
+    border-color: rgba(212, 175, 55, 0.15);
+  }
+
+  .header-inner {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    height: 72px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+    color: var(--white);
+  }
+
+  .logo-symbol {
+    font-size: 1.6rem;
+    color: var(--gold);
+    line-height: 1;
+  }
+
+  .logo-text {
+    font-family: 'Cinzel', serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    color: var(--white);
+  }
+
+  .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .nav-link {
+    color: var(--gray);
+    text-decoration: none;
+    font-size: 0.85rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    font-weight: 500;
+    transition: color 0.2s;
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+  }
+
+  .nav-link:hover {
+    color: var(--gold);
+  }
+
+  .ext-arrow {
+    font-size: 0.7rem;
+    opacity: 0.7;
+  }
+
+  .btn-shop {
+    background: var(--gold);
+    color: var(--black);
+    padding: 0.55rem 1.4rem;
+    border-radius: 2px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: background 0.2s, transform 0.1s;
+  }
+
+  .btn-shop:hover {
+    background: var(--gold-light);
+    transform: translateY(-1px);
+  }
+
+  .burger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+  }
+
+  .burger span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background: var(--white);
+    transition: 0.3s;
+  }
+
+  .mobile-menu {
+    display: none;
+    flex-direction: column;
+    padding: 1.5rem 2rem 2rem;
+    background: rgba(7, 7, 7, 0.98);
+    border-top: 1px solid rgba(212, 175, 55, 0.15);
+    gap: 0;
+  }
+
+  .mobile-menu.open {
+    display: flex;
+  }
+
+  .mobile-link {
+    color: var(--gray);
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 0.9rem 0;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    font-weight: 500;
+    transition: color 0.2s;
+  }
+
+  .mobile-link:hover {
+    color: var(--gold);
+  }
+
+  .mobile-cta {
+    margin-top: 1.5rem;
+    text-align: center;
+    padding: 1rem;
+  }
+
+  @media (max-width: 768px) {
+    .nav-links {
+      display: none;
+    }
+    .burger {
+      display: flex;
+    }
+  }
+</style>
+
+<script>
+  const header = document.getElementById('header');
+  const burger = document.getElementById('burger');
+  const menu = document.getElementById('mobile-menu');
+
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 20) {
+      header?.classList.add('scrolled');
+    } else {
+      header?.classList.remove('scrolled');
+    }
+  });
+
+  burger?.addEventListener('click', () => {
+    menu?.classList.toggle('open');
+  });
+</script>
