@@ -1,12 +1,13 @@
 ---
 const year = new Date().getFullYear();
+const base = import.meta.env.BASE_URL;
 ---
 
 <footer>
   <div class="footer-inner">
     <div class="footer-top">
       <div class="footer-brand">
-        <a href="/IRG/" class="footer-logo">
+        <a href={base} class="footer-logo">
           <span class="logo-symbol">∞</span>
           <span class="logo-text">INFINETT</span>
         </a>
@@ -38,9 +39,9 @@ const year = new Date().getFullYear();
       <div class="footer-col">
         <h4>Brand</h4>
         <ul>
-          <li><a href="/IRG/story">Our Story</a></li>
-          <li><a href="/IRG/collection">Collection</a></li>
-          <li><a href="/IRG/#symbols">Sacred Symbols</a></li>
+          <li><a href={`${base}story`}>Our Story</a></li>
+          <li><a href={`${base}collection`}>Collection</a></li>
+          <li><a href={`${base}#symbols`}>Sacred Symbols</a></li>
         </ul>
       </div>
 

@@ -1,14 +1,15 @@
 ---
+const base = import.meta.env.BASE_URL;
 const nav = [
-  { label: "Collection", href: "/IRG/collection" },
-  { label: "Our Story", href: "/IRG/story" },
+  { label: "Collection", href: `${base}collection` },
+  { label: "Our Story", href: `${base}story` },
   { label: "Shop", href: "https://shopinfinettcom.com", external: true },
 ];
 ---
 
 <header id="header">
   <div class="header-inner">
-    <a href="/IRG/" class="logo" aria-label="INFINETT Home">
+    <a href={base} class="logo" aria-label="INFINETT Home">
       <span class="logo-symbol">∞</span>
       <span class="logo-text">INFINETT</span>
     </a>
