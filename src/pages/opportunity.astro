@@ -1,0 +1,502 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+const base = import.meta.env.BASE_URL;
+---
+
+<Layout
+  title="Business Opportunity — Infinite Results Global"
+  description="Explore a part-time or full-time income opportunity with Infinite Results Global. Learn how to earn additional income in financial services."
+>
+  <Header />
+
+  <main>
+    <!-- HERO -->
+    <section class="opp-hero">
+      <div class="hero-glow"></div>
+      <div class="hero-content">
+        <p class="eyebrow">Infinite Results Global</p>
+        <h1>Build Income.<br /><span class="gold">Build Freedom.</span></h1>
+        <p class="hero-sub">
+          We're expanding a financial services team in your area. Whether you're looking for
+          extra income part-time or ready for a full career change — we want to talk.
+        </p>
+        <a href="#book" class="btn-primary">Book a 30-Minute Call →</a>
+      </div>
+    </section>
+
+    <!-- WHAT YOU GET -->
+    <section class="benefits">
+      <div class="section-inner">
+        <div class="section-header">
+          <p class="section-eyebrow">The Opportunity</p>
+          <h2 class="section-title">Why People Choose This</h2>
+        </div>
+        <div class="benefits-grid">
+          {[
+            { icon: "💰", title: "Part-Time or Full-Time", desc: "Start earning extra income around your current schedule. No need to quit your job to get started." },
+            { icon: "📈", title: "Unlimited Earning Potential", desc: "Commission-based income with no cap. Your effort directly determines your results." },
+            { icon: "🧠", title: "Financial Education", desc: "Learn concepts that most people are never taught — and teach them to others." },
+            { icon: "🏆", title: "Leadership Path", desc: "Build your own team. As your team grows, your income grows. True residual potential." },
+            { icon: "🛡️", title: "Help Families", desc: "Protect families with life insurance and financial planning. Meaningful work that matters." },
+            { icon: "🌎", title: "Remote-Friendly", desc: "Work from anywhere. Virtual appointments, flexible schedule, your business your way." },
+          ].map(b => (
+            <div class="benefit-card">
+              <div class="benefit-icon">{b.icon}</div>
+              <h3>{b.title}</h3>
+              <p>{b.desc}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- WHO WE'RE LOOKING FOR -->
+    <section class="looking-for">
+      <div class="section-inner">
+        <div class="two-col">
+          <div class="col-text">
+            <p class="section-eyebrow">Ideal Candidate</p>
+            <h2>We're Looking for Motivated People</h2>
+            <p>This isn't for everyone. We're specifically looking for people who are:</p>
+            <ul class="trait-list">
+              {[
+                "Motivated and coachable",
+                "Looking for extra income (even part-time)",
+                "Open to learning something new",
+                "Reliable and consistent",
+                "Interested in helping others",
+                "Ready to invest in their future",
+              ].map(t => (
+                <li>
+                  <span class="check">✓</span>
+                  <span>{t}</span>
+                </li>
+              ))}
+            </ul>
+            <p class="note">No experience needed. Full training provided.</p>
+          </div>
+          <div class="col-card">
+            <div class="quote-card">
+              <div class="quote-symbol">∞</div>
+              <blockquote>
+                "The biggest mistake new business owners make is hiring people without systems. We built the system first."
+              </blockquote>
+              <p class="quote-attr">— Nicholas, CEO · Infinite Results Global</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section class="how-it-works">
+      <div class="section-inner">
+        <div class="section-header">
+          <p class="section-eyebrow">The Process</p>
+          <h2 class="section-title">How It Works</h2>
+        </div>
+        <div class="steps">
+          {[
+            { num: "01", title: "Book a Call", desc: "Schedule a free 30-minute conversation to learn more. No pressure, no obligation." },
+            { num: "02", title: "Get the Full Picture", desc: "We'll walk you through the opportunity, the compensation, and what a typical week looks like." },
+            { num: "03", title: "Make Your Decision", desc: "Take time to think it over. We never pressure. If it's a fit, we'll get you started." },
+            { num: "04", title: "Start Training", desc: "Complete your licensing (if required) and begin your training. We'll be with you every step." },
+          ].map(s => (
+            <div class="step">
+              <div class="step-num">{s.num}</div>
+              <div class="step-body">
+                <h3>{s.title}</h3>
+                <p>{s.desc}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- BOOKING -->
+    <section class="book-section" id="book">
+      <div class="book-inner">
+        <div class="book-text">
+          <p class="section-eyebrow">Book Your Call</p>
+          <h2>Ready to Learn More?</h2>
+          <p>
+            Pick a time that works for you. The call is free, takes 30 minutes,
+            and you'll leave knowing exactly what this is — and whether it's right for you.
+          </p>
+          <ul class="book-bullets">
+            <li>✓ Free, no-obligation conversation</li>
+            <li>✓ 30 minutes via Zoom or phone</li>
+            <li>✓ Get all your questions answered</li>
+          </ul>
+        </div>
+        <div class="book-embed">
+          <!-- Replace with your Calendly embed URL -->
+          <div class="calendly-placeholder">
+            <div class="cal-icon">📅</div>
+            <h3>Schedule Your Call</h3>
+            <p>Click below to pick a time that works for you.</p>
+            <a
+              href="https://calendly.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn-primary"
+            >
+              View Available Times →
+            </a>
+            <p class="cal-note">
+              Or email us at<br />
+              <a href="mailto:infiniteresultsmarketing@gmail.com">infiniteresultsmarketing@gmail.com</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+</Layout>
+
+<style>
+  main { padding-top: 72px; }
+
+  /* HERO */
+  .opp-hero {
+    position: relative;
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+    padding: 6rem 2rem;
+  }
+
+  .hero-glow {
+    position: absolute;
+    top: 20%; left: 50%;
+    transform: translateX(-50%);
+    width: 700px; height: 700px;
+    background: radial-gradient(circle, rgba(212,175,55,0.08) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .hero-content {
+    position: relative;
+    max-width: 760px;
+  }
+
+  .eyebrow {
+    font-size: 0.72rem;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 1.2rem;
+    font-weight: 600;
+  }
+
+  h1 {
+    font-family: 'Cinzel', serif;
+    font-size: clamp(2.8rem, 8vw, 5.5rem);
+    font-weight: 900;
+    line-height: 1.05;
+    margin-bottom: 1.5rem;
+  }
+
+  .gold {
+    background: linear-gradient(135deg, var(--gold-dark), var(--gold), var(--gold-light));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .hero-sub {
+    color: var(--gray);
+    font-size: 1.05rem;
+    line-height: 1.8;
+    max-width: 580px;
+    margin: 0 auto 2.5rem;
+  }
+
+  .btn-primary {
+    background: var(--gold);
+    color: var(--black);
+    padding: 0.9rem 2.4rem;
+    font-weight: 700;
+    font-size: 0.85rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 2px;
+    display: inline-block;
+    transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
+  }
+
+  .btn-primary:hover {
+    background: var(--gold-light);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 30px rgba(212,175,55,0.3);
+  }
+
+  /* SECTIONS */
+  .section-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+
+  .section-header {
+    text-align: center;
+    margin-bottom: 3.5rem;
+  }
+
+  .section-eyebrow {
+    font-size: 0.7rem;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 0.75rem;
+    font-weight: 600;
+  }
+
+  .section-title {
+    font-family: 'Cinzel', serif;
+    font-size: clamp(1.8rem, 4vw, 2.8rem);
+    font-weight: 700;
+    color: var(--white);
+  }
+
+  /* BENEFITS */
+  .benefits {
+    padding: 7rem 0;
+    background: var(--dark-2);
+  }
+
+  .benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+
+  .benefit-card {
+    padding: 2.5rem 1.5rem;
+    border: 1px solid rgba(212,175,55,0.08);
+    border-radius: 4px;
+    background: rgba(212,175,55,0.02);
+    transition: border-color 0.3s, transform 0.2s;
+  }
+
+  .benefit-card:hover {
+    border-color: rgba(212,175,55,0.3);
+    transform: translateY(-4px);
+  }
+
+  .benefit-icon { font-size: 2rem; margin-bottom: 1rem; }
+  .benefit-card h3 { font-family: 'Cinzel', serif; font-size: 1rem; color: var(--white); margin-bottom: 0.75rem; }
+  .benefit-card p { font-size: 0.85rem; color: var(--gray); line-height: 1.7; }
+
+  /* LOOKING FOR */
+  .looking-for { padding: 7rem 0; }
+
+  .two-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+    align-items: center;
+  }
+
+  .col-text h2 {
+    font-family: 'Cinzel', serif;
+    font-size: clamp(1.6rem, 3vw, 2.2rem);
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+  }
+
+  .col-text > p {
+    color: var(--gray);
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.7;
+  }
+
+  .trait-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .trait-list li {
+    display: flex;
+    gap: 0.75rem;
+    font-size: 0.9rem;
+    color: var(--white);
+    align-items: flex-start;
+  }
+
+  .check { color: var(--gold); font-weight: 700; flex-shrink: 0; }
+
+  .note {
+    font-size: 0.8rem;
+    color: rgba(212,175,55,0.6);
+    font-style: italic;
+  }
+
+  .quote-card {
+    padding: 3rem 2.5rem;
+    border: 1px solid rgba(212,175,55,0.2);
+    border-radius: 4px;
+    background: rgba(212,175,55,0.03);
+    text-align: center;
+  }
+
+  .quote-symbol { font-size: 2.5rem; color: var(--gold); margin-bottom: 1.5rem; opacity: 0.6; }
+
+  blockquote {
+    font-family: 'Cinzel', serif;
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: var(--white);
+    font-style: italic;
+    margin-bottom: 1.5rem;
+  }
+
+  .quote-attr { font-size: 0.75rem; color: rgba(212,175,55,0.6); letter-spacing: 0.1em; }
+
+  /* HOW IT WORKS */
+  .how-it-works {
+    padding: 7rem 0;
+    background: var(--dark-2);
+  }
+
+  .steps {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+
+  .step {
+    display: flex;
+    gap: 2.5rem;
+    align-items: flex-start;
+    padding: 2rem 0;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+  }
+
+  .step:last-child { border-bottom: none; }
+
+  .step-num {
+    font-family: 'Cinzel', serif;
+    font-size: 2rem;
+    font-weight: 900;
+    color: rgba(212,175,55,0.2);
+    flex-shrink: 0;
+    width: 3rem;
+    line-height: 1.2;
+  }
+
+  .step-body h3 {
+    font-family: 'Cinzel', serif;
+    font-size: 1.05rem;
+    color: var(--gold);
+    margin-bottom: 0.5rem;
+  }
+
+  .step-body p { color: var(--gray); font-size: 0.9rem; line-height: 1.7; }
+
+  /* BOOKING */
+  .book-section {
+    padding: 7rem 0;
+  }
+
+  .book-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+    align-items: center;
+  }
+
+  .book-text h2 {
+    font-family: 'Cinzel', serif;
+    font-size: clamp(1.8rem, 3.5vw, 2.5rem);
+    font-weight: 700;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+  }
+
+  .book-text p {
+    color: var(--gray);
+    font-size: 0.95rem;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+  }
+
+  .book-bullets {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+
+  .book-bullets li {
+    font-size: 0.9rem;
+    color: var(--white);
+  }
+
+  .book-bullets li::before { color: var(--gold); }
+
+  .calendly-placeholder {
+    background: var(--dark-3);
+    border: 1px solid rgba(212,175,55,0.15);
+    border-radius: 4px;
+    padding: 3.5rem 2.5rem;
+    text-align: center;
+  }
+
+  .cal-icon { font-size: 3rem; margin-bottom: 1rem; }
+
+  .calendly-placeholder h3 {
+    font-family: 'Cinzel', serif;
+    font-size: 1.3rem;
+    color: var(--white);
+    margin-bottom: 0.75rem;
+  }
+
+  .calendly-placeholder p {
+    color: var(--gray);
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+  }
+
+  .cal-note {
+    margin-top: 1.5rem;
+    font-size: 0.78rem;
+    color: rgba(255,255,255,0.3);
+    line-height: 1.8;
+  }
+
+  .cal-note a {
+    color: var(--gold);
+    text-decoration: none;
+  }
+
+  @media (max-width: 900px) {
+    .benefits-grid { grid-template-columns: repeat(2, 1fr); }
+    .two-col, .book-inner { grid-template-columns: 1fr; gap: 3rem; }
+  }
+
+  @media (max-width: 540px) {
+    .benefits-grid { grid-template-columns: 1fr; }
+  }
+</style>
