@@ -1,0 +1,407 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout
+  title="Free Financial Consultation — Infinite Results Global"
+  description="Schedule a free Financial Needs Analysis. Learn how to protect your family, reduce debt, and build toward financial independence."
+>
+  <Header />
+
+  <main>
+    <!-- HERO -->
+    <section class="consult-hero">
+      <div class="hero-glow"></div>
+      <div class="hero-content">
+        <p class="eyebrow">Free Consultation</p>
+        <h1>Your Family's<br /><span class="gold">Financial Future</span><br />Starts Here.</h1>
+        <p class="hero-sub">
+          A free, no-obligation Financial Needs Analysis to help you protect your family,
+          eliminate debt, and build a foundation for the future.
+        </p>
+        <a href="#book" class="btn-primary">Book Your Free Session →</a>
+      </div>
+    </section>
+
+    <!-- WHAT WE COVER -->
+    <section class="cover-section">
+      <div class="section-inner">
+        <div class="section-header">
+          <p class="section-eyebrow">What We Cover</p>
+          <h2 class="section-title">In Your Free Consultation</h2>
+          <p class="section-sub">No jargon. No pressure. Just a real conversation about where you are and where you want to go.</p>
+        </div>
+        <div class="cover-grid">
+          {[
+            {
+              icon: "🛡️",
+              title: "Family Protection",
+              desc: "Life insurance strategies to make sure your family is protected if something happens to you. Most families are dangerously underprotected.",
+            },
+            {
+              icon: "💳",
+              title: "Debt Elimination",
+              desc: "A system to eliminate debt faster without making more money. Learn how to restructure what you already have.",
+            },
+            {
+              icon: "📊",
+              title: "Financial Planning",
+              desc: "Simple strategies for saving and investing that don't require a finance degree to understand or implement.",
+            },
+            {
+              icon: "🏠",
+              title: "Mortgage Strategy",
+              desc: "How to pay off your mortgage years early and save tens of thousands in interest.",
+            },
+            {
+              icon: "📈",
+              title: "Retirement Income",
+              desc: "Building a plan for retirement that doesn't rely solely on Social Security or a 401(k) you can't touch.",
+            },
+            {
+              icon: "📚",
+              title: "Financial Education",
+              desc: "Concepts most people are never taught in school — but that change everything once you understand them.",
+            },
+          ].map(c => (
+            <div class="cover-card">
+              <div class="cover-icon">{c.icon}</div>
+              <h3>{c.title}</h3>
+              <p>{c.desc}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- WHO THIS IS FOR -->
+    <section class="who-section">
+      <div class="section-inner">
+        <div class="section-header">
+          <p class="section-eyebrow">Who This Is For</p>
+          <h2 class="section-title">This Is for You If...</h2>
+        </div>
+        <div class="who-grid">
+          {[
+            "You have a family you want to protect",
+            "You're carrying debt and don't see a way out",
+            "You don't have a life insurance policy — or you're not sure if it's enough",
+            "You've never sat down with a financial professional",
+            "You want to understand your options before it's too late",
+            "You want to leave something behind for your children",
+          ].map(item => (
+            <div class="who-item">
+              <span class="who-check">✓</span>
+              <span>{item}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- PROCESS -->
+    <section class="process-section">
+      <div class="section-inner">
+        <div class="section-header">
+          <p class="section-eyebrow">The Process</p>
+          <h2 class="section-title">Simple. Free. No Pressure.</h2>
+        </div>
+        <div class="process-steps">
+          {[
+            { num: "01", title: "Book Your Appointment", desc: "Pick a time that works for you — in person, phone, or Zoom. Takes 30–45 minutes." },
+            { num: "02", title: "We Review Your Situation", desc: "We'll look at your current financial picture — income, expenses, protection, debt, and goals." },
+            { num: "03", title: "You Get a Clear Plan", desc: "We'll walk you through specific recommendations tailored to your family's situation." },
+            { num: "04", title: "You Decide What's Next", desc: "Zero pressure. Take the information and do what you want with it. That's it." },
+          ].map(s => (
+            <div class="process-step">
+              <div class="step-num">{s.num}</div>
+              <div>
+                <h3>{s.title}</h3>
+                <p>{s.desc}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- BOOKING -->
+    <section class="book-section" id="book">
+      <div class="book-inner">
+        <div class="book-text">
+          <p class="section-eyebrow">Schedule Now</p>
+          <h2>Book Your Free Financial Needs Analysis</h2>
+          <p>Takes 30–45 minutes. Completely free. You'll leave with clarity — regardless of whether we work together.</p>
+          <div class="trust-items">
+            {[
+              "100% Free — No hidden costs",
+              "No sales pressure",
+              "Available via phone or Zoom",
+              "Serving families across the US",
+            ].map(t => (
+              <div class="trust-item">
+                <span class="trust-check">✓</span>
+                <span>{t}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+        <div class="book-embed">
+          <div class="calendly-placeholder">
+            <div class="cal-icon">📅</div>
+            <h3>Choose Your Time</h3>
+            <p>Click below to see available appointments and book your free session.</p>
+            <a
+              href="https://calendly.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn-primary"
+            >
+              Book Free Consultation →
+            </a>
+            <p class="cal-note">
+              Questions? Email us at<br />
+              <a href="mailto:infiniteresultsmarketing@gmail.com">infiniteresultsmarketing@gmail.com</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+</Layout>
+
+<style>
+  main { padding-top: 72px; }
+
+  .consult-hero {
+    position: relative;
+    min-height: 85vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+    padding: 6rem 2rem;
+  }
+
+  .hero-glow {
+    position: absolute;
+    top: 20%; left: 50%;
+    transform: translateX(-50%);
+    width: 700px; height: 700px;
+    background: radial-gradient(circle, rgba(212,175,55,0.08) 0%, transparent 70%);
+  }
+
+  .hero-content { position: relative; max-width: 760px; }
+
+  .eyebrow {
+    font-size: 0.72rem;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 1.2rem;
+    font-weight: 600;
+  }
+
+  h1 {
+    font-family: 'Cinzel', serif;
+    font-size: clamp(2.8rem, 8vw, 5rem);
+    font-weight: 900;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+  }
+
+  .gold {
+    background: linear-gradient(135deg, var(--gold-dark), var(--gold), var(--gold-light));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .hero-sub {
+    color: var(--gray);
+    font-size: 1.05rem;
+    line-height: 1.8;
+    max-width: 580px;
+    margin: 0 auto 2.5rem;
+  }
+
+  .btn-primary {
+    background: var(--gold);
+    color: var(--black);
+    padding: 0.9rem 2.4rem;
+    font-weight: 700;
+    font-size: 0.85rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 2px;
+    display: inline-block;
+    transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
+  }
+
+  .btn-primary:hover {
+    background: var(--gold-light);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 30px rgba(212,175,55,0.3);
+  }
+
+  .section-inner { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
+
+  .section-header { text-align: center; margin-bottom: 3.5rem; }
+
+  .section-eyebrow {
+    font-size: 0.7rem;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 0.75rem;
+    font-weight: 600;
+  }
+
+  .section-title {
+    font-family: 'Cinzel', serif;
+    font-size: clamp(1.8rem, 4vw, 2.8rem);
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 0.75rem;
+  }
+
+  .section-sub { color: var(--gray); font-size: 0.95rem; line-height: 1.7; }
+
+  .cover-section { padding: 7rem 0; background: var(--dark-2); }
+
+  .cover-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+
+  .cover-card {
+    padding: 2.5rem 1.5rem;
+    border: 1px solid rgba(212,175,55,0.08);
+    border-radius: 4px;
+    background: rgba(212,175,55,0.02);
+    transition: border-color 0.3s, transform 0.2s;
+  }
+
+  .cover-card:hover { border-color: rgba(212,175,55,0.3); transform: translateY(-4px); }
+
+  .cover-icon { font-size: 2rem; margin-bottom: 1rem; }
+  .cover-card h3 { font-family: 'Cinzel', serif; font-size: 1rem; color: var(--white); margin-bottom: 0.75rem; }
+  .cover-card p { font-size: 0.85rem; color: var(--gray); line-height: 1.7; }
+
+  .who-section { padding: 7rem 0; }
+
+  .who-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .who-item {
+    display: flex;
+    gap: 0.75rem;
+    font-size: 0.95rem;
+    color: var(--white);
+    align-items: flex-start;
+    padding: 1rem 1.25rem;
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: 4px;
+    background: rgba(255,255,255,0.02);
+  }
+
+  .who-check { color: var(--gold); font-weight: 700; flex-shrink: 0; }
+
+  .process-section { padding: 7rem 0; background: var(--dark-2); }
+
+  .process-steps {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    max-width: 680px;
+    margin: 0 auto;
+  }
+
+  .process-step {
+    display: flex;
+    gap: 2.5rem;
+    align-items: flex-start;
+    padding: 2rem 0;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+  }
+
+  .process-step:last-child { border-bottom: none; }
+
+  .step-num {
+    font-family: 'Cinzel', serif;
+    font-size: 2rem;
+    font-weight: 900;
+    color: rgba(212,175,55,0.2);
+    flex-shrink: 0;
+    width: 3rem;
+    line-height: 1.2;
+  }
+
+  .process-step h3 { font-family: 'Cinzel', serif; font-size: 1.05rem; color: var(--gold); margin-bottom: 0.5rem; }
+  .process-step p { color: var(--gray); font-size: 0.9rem; line-height: 1.7; }
+
+  .book-section { padding: 7rem 0; }
+
+  .book-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+    align-items: center;
+  }
+
+  .book-text h2 {
+    font-family: 'Cinzel', serif;
+    font-size: clamp(1.8rem, 3.5vw, 2.3rem);
+    font-weight: 700;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+  }
+
+  .book-text p { color: var(--gray); font-size: 0.95rem; line-height: 1.8; margin-bottom: 1.5rem; }
+
+  .trust-items { display: flex; flex-direction: column; gap: 0.6rem; }
+
+  .trust-item { display: flex; gap: 0.75rem; font-size: 0.9rem; color: var(--white); align-items: center; }
+  .trust-check { color: var(--gold); font-weight: 700; }
+
+  .calendly-placeholder {
+    background: var(--dark-3);
+    border: 1px solid rgba(212,175,55,0.15);
+    border-radius: 4px;
+    padding: 3.5rem 2.5rem;
+    text-align: center;
+  }
+
+  .cal-icon { font-size: 3rem; margin-bottom: 1rem; }
+
+  .calendly-placeholder h3 { font-family: 'Cinzel', serif; font-size: 1.3rem; color: var(--white); margin-bottom: 0.75rem; }
+  .calendly-placeholder p { color: var(--gray); font-size: 0.9rem; margin-bottom: 1.5rem; line-height: 1.6; }
+
+  .cal-note { margin-top: 1.5rem; font-size: 0.78rem; color: rgba(255,255,255,0.3); line-height: 1.8; }
+  .cal-note a { color: var(--gold); text-decoration: none; }
+
+  @media (max-width: 900px) {
+    .cover-grid { grid-template-columns: repeat(2, 1fr); }
+    .who-grid { grid-template-columns: 1fr; }
+    .book-inner { grid-template-columns: 1fr; gap: 3rem; }
+  }
+
+  @media (max-width: 540px) {
+    .cover-grid { grid-template-columns: 1fr; }
+  }
+</style>

@@ -1,0 +1,91 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout title="404 — Page Not Found | INFINETT">
+  <Header />
+  <main class="not-found">
+    <div class="nf-glow"></div>
+    <div class="nf-content">
+      <div class="nf-symbol">∞</div>
+      <h1>404</h1>
+      <p>Even pharaohs sometimes took the wrong path through the labyrinth.</p>
+      <a href={import.meta.env.BASE_URL} class="btn-primary">Return to the Empire</a>
+    </div>
+  </main>
+  <Footer />
+</Layout>
+
+<style>
+  main.not-found {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    padding-top: 72px;
+  }
+
+  .nf-glow {
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    width: 500px; height: 500px;
+    background: radial-gradient(circle, rgba(212, 175, 55, 0.08) 0%, transparent 70%);
+  }
+
+  .nf-content {
+    position: relative;
+    padding: 2rem;
+  }
+
+  .nf-symbol {
+    font-size: 4rem;
+    color: var(--gold);
+    margin-bottom: 1rem;
+    opacity: 0.5;
+  }
+
+  h1 {
+    font-family: 'Cinzel', serif;
+    font-size: clamp(5rem, 15vw, 10rem);
+    font-weight: 900;
+    background: linear-gradient(135deg, var(--gold-dark), var(--gold), var(--gold-light));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    line-height: 1;
+    margin-bottom: 1.5rem;
+  }
+
+  p {
+    color: var(--gray);
+    font-size: 1rem;
+    margin-bottom: 2.5rem;
+    max-width: 400px;
+    line-height: 1.7;
+  }
+
+  .btn-primary {
+    background: var(--gold);
+    color: var(--black);
+    padding: 0.9rem 2.4rem;
+    font-weight: 700;
+    font-size: 0.85rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 2px;
+    display: inline-block;
+    transition: background 0.2s, transform 0.15s;
+  }
+
+  .btn-primary:hover {
+    background: var(--gold-light);
+    transform: translateY(-2px);
+  }
+</style>

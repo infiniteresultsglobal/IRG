@@ -1,0 +1,102 @@
+---
+export interface Props {
+  title: string;
+  description?: string;
+  image?: string;
+}
+
+const {
+  title,
+  description = "INFINETT — Premium Egyptian mythology streetwear. Sacred symbols. Boundless ambition. Wear the empire.",
+  image = `${import.meta.env.BASE_URL}og-image.jpg`,
+} = Astro.props;
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href={`${import.meta.env.BASE_URL}favicon.svg`} />
+    <link rel="canonical" href={canonicalURL} />
+
+    <title>{title}</title>
+    <meta name="description" content={description} />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={image} />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={image} />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&family=Cinzel:wght@400;600;700;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      :root {
+        --gold: #d4af37;
+        --gold-light: #f0d060;
+        --gold-dark: #b8960c;
+        --black: #000000;
+        --dark: #070707;
+        --dark-2: #0e0e0e;
+        --dark-3: #161616;
+        --white: #ffffff;
+        --gray: #a0a0a0;
+      }
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        background-color: var(--dark);
+        color: var(--white);
+        font-family: 'Inter', system-ui, sans-serif;
+        line-height: 1.6;
+        overflow-x: hidden;
+      }
+
+      ::selection {
+        background: var(--gold);
+        color: var(--black);
+      }
+
+      ::-webkit-scrollbar {
+        width: 4px;
+      }
+
+      ::-webkit-scrollbar-track {
+        background: var(--dark);
+      }
+
+      ::-webkit-scrollbar-thumb {
+        background: var(--gold-dark);
+        border-radius: 2px;
+      }
+    </style>
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>

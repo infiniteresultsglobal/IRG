@@ -1,0 +1,430 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+const products = [
+  {
+    name: "Gold Winged Infinity Hoodie",
+    price: "$95",
+    category: "Hoodies",
+    image: "https://cdn.shopify.com/s/files/1/0716/7790/2950/files/INFINETT-cotton-hoodie-white-left-front-6a0e56fa31ce1.png?v=1779614494",
+    href: "https://shopinfinettcom.com/products/infinett-hoodie-1",
+    tag: "Bestseller",
+    description: "The Official INFINETT Winged Infinity emblem. Boundless ambition in organic cotton.",
+  },
+  {
+    name: "Eye of Ra Solaris Hoodie",
+    price: "$92",
+    category: "Hoodies",
+    image: "https://cdn.shopify.com/s/files/1/0716/7790/2950/files/Eye_of_Ra-cotton-hoodie-white-back-6a0e94327f68e.jpg?v=1779614029",
+    href: "https://shopinfinettcom.com/products/unisex-cotton-hoodie-1",
+    tag: "Kingdom",
+  },
+  {
+    name: "Ank Hoodie — Key of Eternal Life",
+    price: "$92",
+    category: "Hoodies",
+    image: "https://cdn.shopify.com/s/files/1/0716/7790/2950/files/ank-cotton-hoodie-white-front-6a0e944e861f8.jpg?v=1779613840",
+    href: "https://shopinfinettcom.com/products/unisex-cotton-hoodie-2",
+  },
+  {
+    name: "Wings Up Hoodie",
+    price: "$92",
+    category: "Hoodies",
+    image: "https://cdn.shopify.com/s/files/1/0716/7790/2950/files/INFINETT-cotton-hoodie-white-left-front-6a0f3bef97781.jpg?v=1779612226",
+    href: "https://shopinfinettcom.com/products/unisex-cotton-hoodie",
+  },
+  {
+    name: "Gold Symbol Crewneck",
+    price: "$87",
+    category: "Sweatshirts",
+    image: "https://cdn.shopify.com/s/files/1/0716/7790/2950/files/INFINETT-premium-sweatshirt-black-front-6a0e68918f74b.jpg?v=1779614343",
+    href: "https://shopinfinettcom.com/products/unisex-premium-sweatshirt",
+  },
+  {
+    name: "Wings Up Crewneck",
+    price: "$87",
+    category: "Sweatshirts",
+    image: "https://cdn.shopify.com/s/files/1/0716/7790/2950/files/INFINETT-premium-sweatshirt-black-front-6a0f3c8916b4a.jpg?v=1779612149",
+    href: "https://shopinfinettcom.com/products/unisex-premium-sweatshirt-1",
+  },
+  {
+    name: "Gold Wings Down Tee",
+    price: "$56.50",
+    category: "T-Shirts",
+    image: "https://cdn.shopify.com/s/files/1/0716/7790/2950/files/INFINETT-organic-oversized-high-neck-blaster-2.0-t-shirt-french-navy-front-6a0e67cbdee49.png?v=1779614416",
+    href: "https://shopinfinettcom.com/products/unisex-organic-oversized-high-neck-t-shirt",
+    tag: "New",
+  },
+  {
+    name: "Sacred Eye of Ra Anorak",
+    price: "$69",
+    category: "Jackets",
+    image: "https://cdn.shopify.com/s/files/1/0716/7790/2950/files/eye_of_ra-champion-packable-anorak-black-front-6a0e946ec4de4.jpg?v=1779613687",
+    href: "https://shopinfinettcom.com/products/embroidered-champion-packable-jacket-3",
+  },
+  {
+    name: "Sacred Ank Anorak",
+    price: "$69",
+    category: "Jackets",
+    image: "https://cdn.shopify.com/s/files/1/0716/7790/2950/files/ank-champion-packable-anorak-black-front-6a0e94920dc60.jpg?v=1779613590",
+    href: "https://shopinfinettcom.com/products/embroidered-champion-packable-jacket-4",
+  },
+  {
+    name: "Horus Falcon Winged Solar Anorak",
+    price: "$69",
+    category: "Jackets",
+    image: "https://cdn.shopify.com/s/files/1/0716/7790/2950/files/INFINETT_Horus_Falcon_Winged_Solar-champion-packable-anorak-black-front-6a0f3aafdb42a.jpg?v=1779613273",
+    href: "https://shopinfinettcom.com/products/embroidered-champion-packable-jacket",
+  },
+  {
+    name: "Ouroboros Cartouche Anorak",
+    price: "$69",
+    category: "Jackets",
+    image: "https://cdn.shopify.com/s/files/1/0716/7790/2950/files/INFINETT_Ouroboros_Cartouche_Sacred_Seal-champion-packable-anorak-black-front-6a0f3ae77ad10.jpg?v=1779613211",
+    href: "https://shopinfinettcom.com/products/embroidered-champion-packable-jacket-1",
+  },
+  {
+    name: "Winged Infinity Hat",
+    price: "$26",
+    category: "Accessories",
+    image: "https://cdn.shopify.com/s/files/1/0716/7790/2950/files/INFINETT-hat-black-front-6a0e6d41bb8d8.jpg?v=1779614240",
+    href: "https://shopinfinettcom.com/products/dad-hat-1",
+    tag: "Accessory",
+  },
+];
+
+const categories = ["All", "Hoodies", "Jackets", "T-Shirts", "Sweatshirts", "Accessories"];
+---
+
+<Layout
+  title="The Collection — INFINETT"
+  description="Shop the full INFINETT collection. Premium Egyptian mythology streetwear. Hoodies, tees, jackets, accessories."
+>
+  <Header />
+
+  <main>
+    <section class="page-hero">
+      <div class="hero-glow"></div>
+      <div class="hero-content">
+        <p class="eyebrow">Sacred Symbols. Modern Empire.</p>
+        <h1 class="page-title">The <span class="gold">Collection</span></h1>
+        <p class="page-sub">Every piece tells a story older than civilization itself.</p>
+      </div>
+    </section>
+
+    <section class="collection-section">
+      <div class="collection-inner">
+        <!-- Filter bar -->
+        <div class="filter-bar">
+          {categories.map((cat) => (
+            <button class={`filter-btn ${cat === "All" ? "active" : ""}`} data-filter={cat}>
+              {cat}
+            </button>
+          ))}
+        </div>
+
+        <!-- Product grid -->
+        <div class="product-grid" id="product-grid">
+          {products.map((p) => (
+            <a
+              href={p.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="product-card"
+              data-category={p.category}
+            >
+              <div class="product-img-wrap">
+                <img src={p.image} alt={p.name} loading="lazy" />
+                <div class="product-overlay">
+                  <span>Shop on INFINETT →</span>
+                </div>
+                {p.tag && <span class="product-tag">{p.tag}</span>}
+              </div>
+              <div class="product-info">
+                <div>
+                  <p class="product-category">{p.category}</p>
+                  <h3>{p.name}</h3>
+                  {p.description && <p class="product-desc">{p.description}</p>}
+                </div>
+                <span class="product-price">{p.price}</span>
+              </div>
+            </a>
+          ))}
+        </div>
+
+        <div class="all-cta">
+          <p>View all products directly on our store</p>
+          <a href="https://shopinfinettcom.com/collections/all" target="_blank" rel="noopener noreferrer" class="btn-primary">
+            Shop All on INFINETT →
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+</Layout>
+
+<script>
+  const filterBtns = document.querySelectorAll<HTMLButtonElement>('.filter-btn');
+  const cards = document.querySelectorAll<HTMLElement>('.product-card');
+
+  filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      filterBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      const filter = btn.dataset.filter;
+      cards.forEach(card => {
+        if (filter === 'All' || card.dataset.category === filter) {
+          card.style.display = 'block';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    });
+  });
+</script>
+
+<style>
+  main { padding-top: 72px; }
+
+  .page-hero {
+    position: relative;
+    padding: 6rem 2rem 4rem;
+    text-align: center;
+    overflow: hidden;
+  }
+
+  .hero-glow {
+    position: absolute;
+    top: 0; left: 50%;
+    transform: translateX(-50%);
+    width: 500px; height: 500px;
+    background: radial-gradient(circle, rgba(212,175,55,0.07) 0%, transparent 70%);
+  }
+
+  .hero-content { position: relative; }
+
+  .eyebrow {
+    font-size: 0.72rem;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 1.2rem;
+    font-weight: 600;
+  }
+
+  .page-title {
+    font-family: 'Cinzel', serif;
+    font-size: clamp(2.5rem, 7vw, 5rem);
+    font-weight: 900;
+    line-height: 1.0;
+    margin-bottom: 1rem;
+  }
+
+  .gold {
+    background: linear-gradient(135deg, var(--gold-dark), var(--gold), var(--gold-light));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .page-sub {
+    color: var(--gray);
+    font-size: 0.95rem;
+  }
+
+  .collection-section {
+    padding: 2rem 0 5rem;
+  }
+
+  .collection-inner {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+
+  .filter-bar {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    margin-bottom: 3rem;
+    border-bottom: 1px solid rgba(255,255,255,0.07);
+    padding-bottom: 1.5rem;
+  }
+
+  .filter-btn {
+    background: none;
+    border: 1px solid rgba(255,255,255,0.1);
+    color: var(--gray);
+    padding: 0.5rem 1.2rem;
+    font-size: 0.78rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    cursor: pointer;
+    border-radius: 2px;
+    transition: all 0.2s;
+    font-family: inherit;
+  }
+
+  .filter-btn:hover, .filter-btn.active {
+    border-color: var(--gold);
+    color: var(--gold);
+    background: rgba(212, 175, 55, 0.05);
+  }
+
+  .product-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+    margin-bottom: 4rem;
+  }
+
+  .product-card {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+  }
+
+  .product-img-wrap {
+    position: relative;
+    aspect-ratio: 3/4;
+    overflow: hidden;
+    background: var(--dark-3);
+    margin-bottom: 1rem;
+  }
+
+  .product-img-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+  }
+
+  .product-card:hover .product-img-wrap img {
+    transform: scale(1.06);
+  }
+
+  .product-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+
+  .product-overlay span {
+    background: var(--gold);
+    color: var(--black);
+    padding: 0.6rem 1.2rem;
+    font-weight: 700;
+    font-size: 0.75rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    border-radius: 2px;
+  }
+
+  .product-card:hover .product-overlay { opacity: 1; }
+
+  .product-tag {
+    position: absolute;
+    top: 0.75rem;
+    left: 0.75rem;
+    background: var(--gold);
+    color: var(--black);
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 0.25rem 0.6rem;
+    border-radius: 1px;
+  }
+
+  .product-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .product-category {
+    font-size: 0.65rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 0.3rem;
+    font-weight: 600;
+  }
+
+  .product-info h3 {
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--white);
+    line-height: 1.4;
+  }
+
+  .product-desc {
+    font-size: 0.75rem;
+    color: var(--gray);
+    margin-top: 0.3rem;
+    line-height: 1.5;
+  }
+
+  .product-price {
+    font-family: 'Cinzel', serif;
+    font-size: 0.95rem;
+    color: var(--gold);
+    font-weight: 600;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  .all-cta {
+    text-align: center;
+    padding: 3rem 0;
+    border-top: 1px solid rgba(255,255,255,0.07);
+  }
+
+  .all-cta p {
+    color: var(--gray);
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .btn-primary {
+    background: var(--gold);
+    color: var(--black);
+    padding: 0.9rem 2.4rem;
+    font-weight: 700;
+    font-size: 0.85rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 2px;
+    display: inline-block;
+    transition: background 0.2s, transform 0.15s;
+  }
+
+  .btn-primary:hover {
+    background: var(--gold-light);
+    transform: translateY(-2px);
+  }
+
+  @media (max-width: 1100px) {
+    .product-grid { grid-template-columns: repeat(3, 1fr); }
+  }
+
+  @media (max-width: 768px) {
+    .product-grid { grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+  }
+
+  @media (max-width: 480px) {
+    .product-grid { grid-template-columns: 1fr 1fr; gap: 0.75rem; }
+  }
+</style>

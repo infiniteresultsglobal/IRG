@@ -1,0 +1,406 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout
+  title="Our Story — INFINETT"
+  description="INFINETT was born from the belief that ambition is ancient. Discover the brand behind the symbols."
+>
+  <Header />
+
+  <main>
+    <!-- PAGE HERO -->
+    <section class="page-hero">
+      <div class="page-hero-glow"></div>
+      <div class="page-hero-content">
+        <p class="eyebrow">Our Story</p>
+        <h1 class="page-title">
+          <span class="gold">Boundless</span><br />Ambition
+        </h1>
+        <p class="page-sub">
+          We didn't create new symbols. We resurrected the ones that built civilizations.
+        </p>
+      </div>
+    </section>
+
+    <!-- ORIGIN STORY -->
+    <section class="story-section">
+      <div class="story-inner">
+        <div class="story-block">
+          <div class="story-text">
+            <p class="section-eyebrow">The Beginning</p>
+            <h2>Born from Ancient Power</h2>
+            <p>
+              INFINETT started with a simple belief: the most powerful symbols in human history
+              have never gone out of style. The Eye of Ra. The Ankh. The Winged Infinity. The Scarab.
+              These weren't just decorative — they were declarations of sovereignty worn by those
+              who refused to be ordinary.
+            </p>
+            <p>
+              We built INFINETT to bring those symbols into the modern world. Not as costume.
+              Not as gimmick. As genuine streetwear crafted with the same intention that went
+              into carving hieroglyphs into stone temples meant to last eternity.
+            </p>
+          </div>
+          <div class="story-symbol">
+            <div class="big-symbol">𓂀</div>
+            <p class="symbol-caption">Eye of Ra — The All-Seeing</p>
+          </div>
+        </div>
+
+        <div class="story-block reverse">
+          <div class="story-text">
+            <p class="section-eyebrow">The Philosophy</p>
+            <h2>Power Does Not Announce Itself</h2>
+            <p>
+              Every INFINETT piece is a quiet declaration. The Winged Infinity emblem represents
+              boundless ambition — the belief that limits are illusions. The Ankh carries five
+              thousand years of meaning. The Ouroboros reminds you that every ending is a beginning.
+            </p>
+            <p>
+              We are for the builders. The ones who wake up knowing the day belongs to them.
+              The ones who understand that the symbols you carry shape the reality you create.
+            </p>
+          </div>
+          <div class="story-symbol">
+            <div class="big-symbol">∞</div>
+            <p class="symbol-caption">Winged Infinity — Boundless Ambition</p>
+          </div>
+        </div>
+
+        <div class="story-block">
+          <div class="story-text">
+            <p class="section-eyebrow">The Craft</p>
+            <h2>Premium. Sustainable. Intentional.</h2>
+            <p>
+              Every INFINETT garment is crafted from organic cotton and premium materials.
+              We print on demand — meaning every piece is made specifically for you, with zero
+              overstock waste. This is how you build an empire responsibly.
+            </p>
+            <p>
+              From the Winged Gold Hoodie to the Sacred Eye Anorak, each item is designed to be
+              a statement. Not just about style — about the standard you hold yourself to.
+            </p>
+          </div>
+          <div class="story-symbol">
+            <div class="big-symbol">☥</div>
+            <p class="symbol-caption">Ankh — Key of Eternal Life</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- VALUES -->
+    <section class="values-section">
+      <div class="section-inner">
+        <div class="section-header">
+          <p class="section-eyebrow">What We Stand For</p>
+          <h2 class="section-title">The Code</h2>
+        </div>
+        <div class="values-grid">
+          {[
+            { icon: "∞", title: "Infinite Ambition", desc: "We exist for those who reject ceilings. Your potential is not bounded by circumstance, expectation, or fear." },
+            { icon: "𓂀", title: "Ancient Wisdom", desc: "Five thousand years of human achievement distilled into wearable form. We carry what survived." },
+            { icon: "⚡", title: "Relentless Quality", desc: "Organic cotton. Premium construction. Every stitch made with intention. We do not cut corners." },
+            { icon: "♾", title: "Sustainable Empire", desc: "Print-on-demand means no waste. We build for eternity without burdening the planet." },
+          ].map(v => (
+            <div class="value-card">
+              <div class="value-icon">{v.icon}</div>
+              <h3>{v.title}</h3>
+              <p>{v.desc}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="story-cta">
+      <div class="cta-inner">
+        <h2>Ready to Wear the Empire?</h2>
+        <p>The collection is live. The symbols are waiting. Choose yours.</p>
+        <a href="https://shopinfinettcom.com/collections/all" target="_blank" rel="noopener noreferrer" class="btn-primary">
+          Shop the Collection
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+</Layout>
+
+<style>
+  main {
+    padding-top: 72px;
+  }
+
+  .page-hero {
+    position: relative;
+    padding: 8rem 2rem 6rem;
+    text-align: center;
+    overflow: hidden;
+  }
+
+  .page-hero-glow {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(212, 175, 55, 0.07) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .page-hero-content {
+    position: relative;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+
+  .eyebrow {
+    font-size: 0.72rem;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 1.2rem;
+    font-weight: 600;
+  }
+
+  .page-title {
+    font-family: 'Cinzel', serif;
+    font-size: clamp(3rem, 9vw, 6rem);
+    font-weight: 900;
+    line-height: 1.0;
+    margin-bottom: 1.5rem;
+  }
+
+  .gold {
+    background: linear-gradient(135deg, var(--gold-dark), var(--gold), var(--gold-light));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .page-sub {
+    color: var(--gray);
+    font-size: 1.05rem;
+    line-height: 1.8;
+  }
+
+  /* STORY BLOCKS */
+  .story-section {
+    padding: 4rem 0 6rem;
+  }
+
+  .story-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 6rem;
+  }
+
+  .story-block {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+    align-items: center;
+  }
+
+  .story-block.reverse {
+    direction: rtl;
+  }
+
+  .story-block.reverse > * {
+    direction: ltr;
+  }
+
+  .story-text .section-eyebrow {
+    font-size: 0.7rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 0.75rem;
+    font-weight: 600;
+  }
+
+  .story-text h2 {
+    font-family: 'Cinzel', serif;
+    font-size: clamp(1.6rem, 3vw, 2.4rem);
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+  }
+
+  .story-text p {
+    color: var(--gray);
+    font-size: 0.95rem;
+    line-height: 1.9;
+    margin-bottom: 1rem;
+  }
+
+  .story-text p:last-child {
+    margin-bottom: 0;
+  }
+
+  .story-symbol {
+    text-align: center;
+    border: 1px solid rgba(212, 175, 55, 0.12);
+    padding: 4rem 2rem;
+    border-radius: 4px;
+    background: rgba(212, 175, 55, 0.02);
+  }
+
+  .big-symbol {
+    font-size: 6rem;
+    line-height: 1;
+    margin-bottom: 1.5rem;
+    filter: drop-shadow(0 0 20px rgba(212, 175, 55, 0.4));
+  }
+
+  .symbol-caption {
+    font-family: 'Cinzel', serif;
+    font-size: 0.8rem;
+    letter-spacing: 0.15em;
+    color: var(--gold);
+    text-transform: uppercase;
+  }
+
+  /* VALUES */
+  .values-section {
+    padding: 7rem 0;
+    background: var(--dark-2);
+  }
+
+  .section-inner {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+
+  .section-header {
+    text-align: center;
+    margin-bottom: 4rem;
+  }
+
+  .section-eyebrow {
+    font-size: 0.7rem;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 0.75rem;
+    font-weight: 600;
+  }
+
+  .section-title {
+    font-family: 'Cinzel', serif;
+    font-size: clamp(2rem, 5vw, 3rem);
+    font-weight: 700;
+    color: var(--white);
+  }
+
+  .values-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+  }
+
+  .value-card {
+    padding: 2.5rem 1.5rem;
+    border: 1px solid rgba(212, 175, 55, 0.08);
+    border-radius: 4px;
+    transition: border-color 0.3s, transform 0.2s;
+  }
+
+  .value-card:hover {
+    border-color: rgba(212, 175, 55, 0.3);
+    transform: translateY(-4px);
+  }
+
+  .value-icon {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: var(--gold);
+  }
+
+  .value-card h3 {
+    font-family: 'Cinzel', serif;
+    font-size: 1rem;
+    color: var(--white);
+    margin-bottom: 0.75rem;
+  }
+
+  .value-card p {
+    font-size: 0.82rem;
+    color: var(--gray);
+    line-height: 1.7;
+  }
+
+  /* CTA */
+  .story-cta {
+    padding: 7rem 0;
+    text-align: center;
+  }
+
+  .cta-inner {
+    max-width: 560px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+
+  .cta-inner h2 {
+    font-family: 'Cinzel', serif;
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 1rem;
+  }
+
+  .cta-inner p {
+    color: var(--gray);
+    margin-bottom: 2.5rem;
+    font-size: 0.95rem;
+  }
+
+  .btn-primary {
+    background: var(--gold);
+    color: var(--black);
+    padding: 0.9rem 2.4rem;
+    font-weight: 700;
+    font-size: 0.85rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 2px;
+    display: inline-block;
+    transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
+  }
+
+  .btn-primary:hover {
+    background: var(--gold-light);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 30px rgba(212, 175, 55, 0.3);
+  }
+
+  @media (max-width: 900px) {
+    .story-block, .story-block.reverse {
+      grid-template-columns: 1fr;
+      direction: ltr;
+      gap: 2.5rem;
+    }
+    .values-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 540px) {
+    .values-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

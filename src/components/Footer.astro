@@ -1,0 +1,198 @@
+---
+const year = new Date().getFullYear();
+const base = import.meta.env.BASE_URL;
+---
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href={base} class="footer-logo">
+          <span class="logo-symbol">∞</span>
+          <span class="logo-text">INFINETT</span>
+        </a>
+        <p class="tagline">Boundless ambition. Sacred symbols.<br />Wear the empire.</p>
+        <div class="socials">
+          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          </a>
+          <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.69a8.28 8.28 0 0 0 4.84 1.55V6.79a4.85 4.85 0 0 1-1.07-.1z"/></svg>
+          </a>
+          <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Shop</h4>
+        <ul>
+          <li><a href="https://shopinfinettcom.com/collections/hoodies" target="_blank" rel="noopener noreferrer">Hoodies</a></li>
+          <li><a href="https://shopinfinettcom.com/collections/tees" target="_blank" rel="noopener noreferrer">T-Shirts</a></li>
+          <li><a href="https://shopinfinettcom.com/collections/jackets" target="_blank" rel="noopener noreferrer">Jackets</a></li>
+          <li><a href="https://shopinfinettcom.com/collections/accessories" target="_blank" rel="noopener noreferrer">Accessories</a></li>
+          <li><a href="https://shopinfinettcom.com/collections/all" target="_blank" rel="noopener noreferrer">All Products</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Brand</h4>
+        <ul>
+          <li><a href={`${base}story`}>Our Story</a></li>
+          <li><a href={`${base}collection`}>Collection</a></li>
+          <li><a href={`${base}#symbols`}>Sacred Symbols</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Support</h4>
+        <ul>
+          <li><a href="https://shopinfinettcom.com/policies/shipping-policy" target="_blank" rel="noopener noreferrer">Shipping</a></li>
+          <li><a href="https://shopinfinettcom.com/policies/refund-policy" target="_blank" rel="noopener noreferrer">Returns</a></li>
+          <li><a href="https://shopinfinettcom.com/policies/privacy-policy" target="_blank" rel="noopener noreferrer">Privacy</a></li>
+          <li><a href="mailto:infiniteresultsmarketing@gmail.com">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p class="copyright">© {year} INFINETT / Infinite Results Group. All rights reserved.</p>
+      <p class="made-with">Made for those who refuse limits.</p>
+    </div>
+  </div>
+</footer>
+
+<style>
+  footer {
+    background: #000;
+    border-top: 1px solid rgba(212, 175, 55, 0.15);
+    padding: 5rem 0 2rem;
+    margin-top: 6rem;
+  }
+
+  .footer-inner {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+
+  .footer-top {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 3rem;
+    margin-bottom: 4rem;
+  }
+
+  .footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+    color: var(--white);
+    margin-bottom: 1rem;
+  }
+
+  .logo-symbol {
+    font-size: 1.6rem;
+    color: var(--gold);
+    line-height: 1;
+  }
+
+  .logo-text {
+    font-family: 'Cinzel', serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+  }
+
+  .tagline {
+    color: var(--gray);
+    font-size: 0.85rem;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+  }
+
+  .socials {
+    display: flex;
+    gap: 1rem;
+  }
+
+  .socials a {
+    color: var(--gray);
+    transition: color 0.2s;
+  }
+
+  .socials a:hover {
+    color: var(--gold);
+  }
+
+  .footer-col h4 {
+    font-family: 'Cinzel', serif;
+    font-size: 0.75rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 1.2rem;
+  }
+
+  .footer-col ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+  }
+
+  .footer-col ul a {
+    color: var(--gray);
+    text-decoration: none;
+    font-size: 0.85rem;
+    transition: color 0.2s;
+  }
+
+  .footer-col ul a:hover {
+    color: var(--white);
+  }
+
+  .footer-bottom {
+    border-top: 1px solid rgba(255,255,255,0.06);
+    padding-top: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .copyright {
+    color: var(--gray);
+    font-size: 0.78rem;
+  }
+
+  .made-with {
+    color: rgba(212, 175, 55, 0.5);
+    font-size: 0.78rem;
+    font-family: 'Cinzel', serif;
+    letter-spacing: 0.1em;
+  }
+
+  @media (max-width: 900px) {
+    .footer-top {
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+    }
+    .footer-brand {
+      grid-column: 1 / -1;
+    }
+  }
+
+  @media (max-width: 540px) {
+    .footer-top {
+      grid-template-columns: 1fr;
+    }
+    .footer-bottom {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+</style>
