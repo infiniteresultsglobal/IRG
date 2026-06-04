@@ -4,427 +4,341 @@ import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 
 const products = [
-  {
-    name: "Gold Winged Infinity Hoodie",
-    price: "$95",
-    category: "Hoodies",
-    image: "https://cdn.shopify.com/s/files/1/0716/7790/2950/files/INFINETT-cotton-hoodie-white-left-front-6a0e56fa31ce1.png?v=1779614494",
-    href: "https://shopinfinettcom.com/products/infinett-hoodie-1",
-    tag: "Bestseller",
-    description: "The Official INFINETT Winged Infinity emblem. Boundless ambition in organic cotton.",
-  },
-  {
-    name: "Eye of Ra Solaris Hoodie",
-    price: "$92",
-    category: "Hoodies",
-    image: "https://cdn.shopify.com/s/files/1/0716/7790/2950/files/Eye_of_Ra-cotton-hoodie-white-back-6a0e94327f68e.jpg?v=1779614029",
-    href: "https://shopinfinettcom.com/products/unisex-cotton-hoodie-1",
-    tag: "Kingdom",
-  },
-  {
-    name: "Ank Hoodie — Key of Eternal Life",
-    price: "$92",
-    category: "Hoodies",
-    image: "https://cdn.shopify.com/s/files/1/0716/7790/2950/files/ank-cotton-hoodie-white-front-6a0e944e861f8.jpg?v=1779613840",
-    href: "https://shopinfinettcom.com/products/unisex-cotton-hoodie-2",
-  },
-  {
-    name: "Wings Up Hoodie",
-    price: "$92",
-    category: "Hoodies",
-    image: "https://cdn.shopify.com/s/files/1/0716/7790/2950/files/INFINETT-cotton-hoodie-white-left-front-6a0f3bef97781.jpg?v=1779612226",
-    href: "https://shopinfinettcom.com/products/unisex-cotton-hoodie",
-  },
-  {
-    name: "Gold Symbol Crewneck",
-    price: "$87",
-    category: "Sweatshirts",
-    image: "https://cdn.shopify.com/s/files/1/0716/7790/2950/files/INFINETT-premium-sweatshirt-black-front-6a0e68918f74b.jpg?v=1779614343",
-    href: "https://shopinfinettcom.com/products/unisex-premium-sweatshirt",
-  },
-  {
-    name: "Wings Up Crewneck",
-    price: "$87",
-    category: "Sweatshirts",
-    image: "https://cdn.shopify.com/s/files/1/0716/7790/2950/files/INFINETT-premium-sweatshirt-black-front-6a0f3c8916b4a.jpg?v=1779612149",
-    href: "https://shopinfinettcom.com/products/unisex-premium-sweatshirt-1",
-  },
-  {
-    name: "Gold Wings Down Tee",
-    price: "$56.50",
-    category: "T-Shirts",
-    image: "https://cdn.shopify.com/s/files/1/0716/7790/2950/files/INFINETT-organic-oversized-high-neck-blaster-2.0-t-shirt-french-navy-front-6a0e67cbdee49.png?v=1779614416",
-    href: "https://shopinfinettcom.com/products/unisex-organic-oversized-high-neck-t-shirt",
-    tag: "New",
-  },
-  {
-    name: "Sacred Eye of Ra Anorak",
-    price: "$69",
-    category: "Jackets",
-    image: "https://cdn.shopify.com/s/files/1/0716/7790/2950/files/eye_of_ra-champion-packable-anorak-black-front-6a0e946ec4de4.jpg?v=1779613687",
-    href: "https://shopinfinettcom.com/products/embroidered-champion-packable-jacket-3",
-  },
-  {
-    name: "Sacred Ank Anorak",
-    price: "$69",
-    category: "Jackets",
-    image: "https://cdn.shopify.com/s/files/1/0716/7790/2950/files/ank-champion-packable-anorak-black-front-6a0e94920dc60.jpg?v=1779613590",
-    href: "https://shopinfinettcom.com/products/embroidered-champion-packable-jacket-4",
-  },
-  {
-    name: "Horus Falcon Winged Solar Anorak",
-    price: "$69",
-    category: "Jackets",
-    image: "https://cdn.shopify.com/s/files/1/0716/7790/2950/files/INFINETT_Horus_Falcon_Winged_Solar-champion-packable-anorak-black-front-6a0f3aafdb42a.jpg?v=1779613273",
-    href: "https://shopinfinettcom.com/products/embroidered-champion-packable-jacket",
-  },
-  {
-    name: "Ouroboros Cartouche Anorak",
-    price: "$69",
-    category: "Jackets",
-    image: "https://cdn.shopify.com/s/files/1/0716/7790/2950/files/INFINETT_Ouroboros_Cartouche_Sacred_Seal-champion-packable-anorak-black-front-6a0f3ae77ad10.jpg?v=1779613211",
-    href: "https://shopinfinettcom.com/products/embroidered-champion-packable-jacket-1",
-  },
-  {
-    name: "Winged Infinity Hat",
-    price: "$26",
-    category: "Accessories",
-    image: "https://cdn.shopify.com/s/files/1/0716/7790/2950/files/INFINETT-hat-black-front-6a0e6d41bb8d8.jpg?v=1779614240",
-    href: "https://shopinfinettcom.com/products/dad-hat-1",
-    tag: "Accessory",
-  },
+  // HOODIES
+  { name: "Gold Winged Infinity Hoodie",      price: "$95",    image: "https://cdn.shopify.com/s/files/1/0716/7790/2950/files/INFINETT-cotton-hoodie-white-left-front-6a0e56fa31ce1.png?v=1779614494",                                                                                    href: "https://shopinfinettcom.com/products/infinett-hoodie-1",                                tag: "Bestseller", category: "Hoodies" },
+  { name: "Eye of Ra Solaris Hoodie",         price: "$92",    image: "https://cdn.shopify.com/s/files/1/0716/7790/2950/files/Eye_of_Ra-cotton-hoodie-white-back-6a0e94327f68e.jpg?v=1779614029",                                                                                      href: "https://shopinfinettcom.com/products/unisex-cotton-hoodie-1",                           tag: "Kingdom",    category: "Hoodies" },
+  { name: "Ank Hoodie — Key of Eternal Life", price: "$92",    image: "https://cdn.shopify.com/s/files/1/0716/7790/2950/files/ank-cotton-hoodie-white-front-6a0e944e861f8.jpg?v=1779613840",                                                                                           href: "https://shopinfinettcom.com/products/unisex-cotton-hoodie-2",                           tag: "",           category: "Hoodies" },
+  { name: "Wings Up Hoodie",                  price: "$92",    image: "https://cdn.shopify.com/s/files/1/0716/7790/2950/files/INFINETT-cotton-hoodie-white-left-front-6a0f3bef97781.jpg?v=1779612226",                                                                                 href: "https://shopinfinettcom.com/products/unisex-cotton-hoodie",                             tag: "",           category: "Hoodies" },
+  { name: "Wings Up Eco Raglan Hoodie",       price: "$81.50", image: "https://cdn.shopify.com/s/files/1/0716/7790/2950/files/unisex-eco-raglan-hoodie-black-front-6a1ec24862474.png?v=1780400738",                                                                                    href: "https://shopinfinettcom.com/products/unisex-eco-raglan-hoodie",                         tag: "Eco",        category: "Hoodies" },
+  { name: "Sacred Eye Eco Raglan Hoodie",     price: "$81.50", image: "https://cdn.shopify.com/s/files/1/0716/7790/2950/files/unisex-eco-raglan-hoodie-black-front-6a1ec28dc3953.png?v=1780400801",                                                                                    href: "https://shopinfinettcom.com/products/unisex-eco-raglan-hoodie-1",                       tag: "Eco",        category: "Hoodies" },
+  // JACKETS
+  { name: "Sacred Eye of Ra Anorak",          price: "$69",    image: "https://cdn.shopify.com/s/files/1/0716/7790/2950/files/eye_of_ra-champion-packable-anorak-black-front-6a0e946ec4de4.jpg?v=1779613687",                                                                          href: "https://shopinfinettcom.com/products/embroidered-champion-packable-jacket-3",           tag: "",           category: "Jackets" },
+  { name: "Sacred Ank Anorak",                price: "$69",    image: "https://cdn.shopify.com/s/files/1/0716/7790/2950/files/ank-champion-packable-anorak-black-front-6a0e94920dc60.jpg?v=1779613590",                                                                               href: "https://shopinfinettcom.com/products/embroidered-champion-packable-jacket-4",           tag: "",           category: "Jackets" },
+  { name: "Horus Falcon Winged Solar Anorak", price: "$69",    image: "https://cdn.shopify.com/s/files/1/0716/7790/2950/files/INFINETT_Horus_Falcon_Winged_Solar-champion-packable-anorak-black-front-6a0f3aafdb42a.jpg?v=1779613273",                                                href: "https://shopinfinettcom.com/products/embroidered-champion-packable-jacket",             tag: "",           category: "Jackets" },
+  { name: "Ouroboros Sacred Seal Anorak",     price: "$69",    image: "https://cdn.shopify.com/s/files/1/0716/7790/2950/files/INFINETT_Ouroboros_Cartouche_Sacred_Seal-champion-packable-anorak-black-front-6a0f3ae77ad10.jpg?v=1779613211",                                          href: "https://shopinfinettcom.com/products/embroidered-champion-packable-jacket-1",           tag: "",           category: "Jackets" },
+  { name: "Ouroboros Pure Ring Anorak",       price: "$69",    image: "https://cdn.shopify.com/s/files/1/0716/7790/2950/files/INFINETT_Ouroboros_Pure_Ring-champion-packable-anorak-black-front-6a0f3b08c5dd8.jpg?v=1779613103",                                                      href: "https://shopinfinettcom.com/products/embroidered-champion-packable-jacket-2",           tag: "",           category: "Jackets" },
+  { name: "Wadjet Cobra Anorak",              price: "$69",    image: "https://cdn.shopify.com/s/files/1/0716/7790/2950/files/INFINETT_Wadjet_Winged_Cobra-champion-packable-anorak-black-front-6a0f3b2d4569c.jpg?v=1779612940",                                                      href: "https://shopinfinettcom.com/products/embroidered-champion-packable-jacket-5",           tag: "",           category: "Jackets" },
+  { name: "Scarab Winged Solar Disk Anorak",  price: "$69",    image: "https://cdn.shopify.com/s/files/1/0716/7790/2950/files/INFINETT_Scarab_Winged_Solar_Disk-champion-packable-anorak-black-front-6a0f3b511ddc8.jpg?v=1779612831",                                                 href: "https://shopinfinettcom.com/products/embroidered-champion-packable-jacket-6",           tag: "",           category: "Jackets" },
+  { name: "Scarab Winged Hieroglyph Anorak",  price: "$69",    image: "https://cdn.shopify.com/s/files/1/0716/7790/2950/files/INFINETT_Scarab_Winged_Hieroglyph-champion-packable-anorak-black-front-6a0f3b74a42e5.jpg?v=1779612433",                                                 href: "https://shopinfinettcom.com/products/embroidered-champion-packable-jacket-7",           tag: "",           category: "Jackets" },
+  { name: "Wings Up Anorak",                  price: "$69",    image: "https://cdn.shopify.com/s/files/1/0716/7790/2950/files/INFINETT-champion-packable-anorak-black-front-6a0f3c33ef2b7.jpg?v=1779612187",                                                                           href: "https://shopinfinettcom.com/products/embroidered-champion-packable-jacket-8",           tag: "",           category: "Jackets" },
+  { name: "Wings Down Anorak",                price: "$69",    image: "https://cdn.shopify.com/s/files/1/0716/7790/2950/files/unisex-champion-packable-anorak-black-front-6a1392b2c8a49.jpg?v=1779667646",                                                                             href: "https://shopinfinettcom.com/products/infinett-wings-down-anorak",                       tag: "New",        category: "Jackets" },
+  { name: "Sacred Empire Bomber Jacket",      price: "$72.50", image: "https://cdn.shopify.com/s/files/1/0716/7790/2950/files/all-over-print-unisex-bomber-jacket-white-front-6a1fd23bc5817.png?v=1780470369",                                                                        href: "https://shopinfinettcom.com/products/infinett-sacred-empire-bomber-jacket",             tag: "New",        category: "Jackets" },
+  // T-SHIRTS
+  { name: "Gold Wings Down Tee",              price: "$56.50", image: "https://cdn.shopify.com/s/files/1/0716/7790/2950/files/INFINETT-organic-oversized-high-neck-blaster-2.0-t-shirt-french-navy-front-6a0e67cbdee49.png?v=1779614416",                                             href: "https://shopinfinettcom.com/products/unisex-organic-oversized-high-neck-t-shirt",      tag: "Organic",    category: "T-Shirts" },
+  // SWEATSHIRTS
+  { name: "Gold Symbol Crewneck",             price: "$87",    image: "https://cdn.shopify.com/s/files/1/0716/7790/2950/files/INFINETT-premium-sweatshirt-black-front-6a0e68918f74b.jpg?v=1779614343",                                                                                href: "https://shopinfinettcom.com/products/unisex-premium-sweatshirt",                        tag: "",           category: "Sweatshirts" },
+  { name: "Wings Up Crewneck",                price: "$87",    image: "https://cdn.shopify.com/s/files/1/0716/7790/2950/files/INFINETT-premium-sweatshirt-black-front-6a0f3c8916b4a.jpg?v=1779612149",                                                                                href: "https://shopinfinettcom.com/products/unisex-premium-sweatshirt-1",                      tag: "",           category: "Sweatshirts" },
+  // JERSEYS
+  { name: "Sacred Symbol Recycled Jersey",    price: "$70",    image: "https://cdn.shopify.com/s/files/1/0716/7790/2950/files/all-over-print-recycled-unisex-sports-jersey-white-back-6a1ebc3e98a73.jpg?v=1780399207",                                                                href: "https://shopinfinettcom.com/products/recycled-unisex-sports-jersey",                    tag: "Eco",        category: "Jerseys" },
+  { name: "Sacred Crest Recycled Jersey",     price: "$70",    image: "https://cdn.shopify.com/s/files/1/0716/7790/2950/files/all-over-print-recycled-unisex-sports-jersey-white-front-6a1fd00f7a2fb.png?v=1780469817",                                                               href: "https://shopinfinettcom.com/products/recycled-unisex-sports-jersey-1",                  tag: "Eco",        category: "Jerseys" },
+  // TANK TOPS
+  { name: "Wings Down Premium Tank Top",      price: "$40",    image: "https://cdn.shopify.com/s/files/1/0716/7790/2950/files/INFINETT_mens-premium-tank-top-black-front-6a0f3fe3b56eb.jpg?v=1779612108",                                                                             href: "https://shopinfinettcom.com/products/men-s-premium-tank-top-1",                        tag: "",           category: "Tank Tops" },
+  // ACCESSORIES
+  { name: "Winged Infinity Hat",              price: "$26",    image: "https://cdn.shopify.com/s/files/1/0716/7790/2950/files/INFINETT-hat-black-front-6a0e6d41bb8d8.jpg?v=1779614240",                                                                                               href: "https://shopinfinettcom.com/products/dad-hat-1",                                        tag: "",           category: "Accessories" },
 ];
 
-const categories = ["All", "Hoodies", "Jackets", "T-Shirts", "Sweatshirts", "Accessories"];
+const categories = ["All", "Hoodies", "Jackets", "T-Shirts", "Sweatshirts", "Jerseys", "Tank Tops", "Accessories"];
 ---
 
 <Layout
-  title="The Collection — INFINETT"
-  description="Shop the full INFINETT collection. Premium Egyptian mythology streetwear. Hoodies, tees, jackets, accessories."
+  title="Full Collection — INFINETT"
+  description="Browse the complete INFINETT collection. Egyptian mythology streetwear including hoodies, anoraks, jerseys, tees and accessories."
 >
   <Header />
 
-  <main>
-    <section class="page-hero">
-      <div class="hero-glow"></div>
-      <div class="hero-content">
-        <p class="eyebrow">Sacred Symbols. Modern Empire.</p>
-        <h1 class="page-title">The <span class="gold">Collection</span></h1>
-        <p class="page-sub">Every piece tells a story older than civilization itself.</p>
+  <main class="collection-main">
+    <div class="col-hero">
+      <div class="col-hero-glow"></div>
+      <div class="col-hero-inner">
+        <p class="eyebrow">INFINETT</p>
+        <h1>The Full Collection</h1>
+        <p class="col-hero-sub">{products.length} pieces. Sacred symbols. Built for empire builders.</p>
       </div>
-    </section>
+    </div>
 
-    <section class="collection-section">
-      <div class="collection-inner">
-        <!-- Filter bar -->
+    <div class="col-body">
+      <div class="col-body-inner">
         <div class="filter-bar">
-          {categories.map((cat) => (
-            <button class={`filter-btn ${cat === "All" ? "active" : ""}`} data-filter={cat}>
-              {cat}
-            </button>
-          ))}
+          <span class="filter-label">Filter:</span>
+          <div class="filter-pills" id="filters">
+            {categories.map((cat, i) => (
+              <button class={`filter-pill ${i === 0 ? 'active' : ''}`} data-cat={cat}>
+                {cat}
+                {cat !== "All" && <span class="pill-count">{products.filter(p => p.category === cat).length}</span>}
+              </button>
+            ))}
+          </div>
+          <span class="product-count" id="product-count">{products.length} products</span>
         </div>
 
-        <!-- Product grid -->
         <div class="product-grid" id="product-grid">
           {products.map((p) => (
-            <a
-              href={p.href}
-              target="_blank"
-              rel="noopener noreferrer"
-              class="product-card"
-              data-category={p.category}
-            >
-              <div class="product-img-wrap">
+            <a href={p.href} target="_blank" rel="noopener noreferrer" class="product-card" data-category={p.category}>
+              <div class="card-img-wrap">
                 <img src={p.image} alt={p.name} loading="lazy" />
-                <div class="product-overlay">
-                  <span>Shop on INFINETT →</span>
-                </div>
-                {p.tag && <span class="product-tag">{p.tag}</span>}
+                <div class="card-overlay">Shop Now →</div>
+                {p.tag && <span class="card-tag">{p.tag}</span>}
               </div>
-              <div class="product-info">
-                <div>
-                  <p class="product-category">{p.category}</p>
-                  <h3>{p.name}</h3>
-                  {p.description && <p class="product-desc">{p.description}</p>}
+              <div class="card-info">
+                <h3>{p.name}</h3>
+                <div class="card-meta">
+                  <span class="card-cat">{p.category}</span>
+                  <span class="card-price">{p.price}</span>
                 </div>
-                <span class="product-price">{p.price}</span>
               </div>
             </a>
           ))}
         </div>
 
-        <div class="all-cta">
-          <p>View all products directly on our store</p>
+        <div class="empty-state" id="empty-state" style="display:none;">
+          <div class="empty-symbol">∞</div>
+          <h3>No pieces in this category yet.</h3>
+          <p>New drops monthly — check back soon.</p>
+        </div>
+
+        <div class="col-cta">
           <a href="https://shopinfinettcom.com/collections/all" target="_blank" rel="noopener noreferrer" class="btn-primary">
-            Shop All on INFINETT →
+            Shop All on Store →
           </a>
         </div>
       </div>
-    </section>
+    </div>
   </main>
 
   <Footer />
 </Layout>
 
 <script>
-  const filterBtns = document.querySelectorAll<HTMLButtonElement>('.filter-btn');
-  const cards = document.querySelectorAll<HTMLElement>('.product-card');
+  const pills = document.querySelectorAll('.filter-pill');
+  const cards = document.querySelectorAll('.product-card');
+  const counter = document.getElementById('product-count');
+  const emptyState = document.getElementById('empty-state');
 
-  filterBtns.forEach(btn => {
-    btn.addEventListener('click', () => {
-      filterBtns.forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
+  pills.forEach(pill => {
+    pill.addEventListener('click', () => {
+      const cat = (pill as HTMLElement).dataset.cat;
+      pills.forEach(p => p.classList.remove('active'));
+      pill.classList.add('active');
 
-      const filter = btn.dataset.filter;
+      let visible = 0;
       cards.forEach(card => {
-        if (filter === 'All' || card.dataset.category === filter) {
-          card.style.display = 'block';
-        } else {
-          card.style.display = 'none';
-        }
+        const show = cat === 'All' || (card as HTMLElement).dataset.category === cat;
+        (card as HTMLElement).style.display = show ? 'block' : 'none';
+        if (show) visible++;
       });
+
+      if (counter) counter.textContent = `${visible} product${visible !== 1 ? 's' : ''}`;
+      if (emptyState) emptyState.style.display = visible === 0 ? 'block' : 'none';
     });
   });
 </script>
 
 <style>
-  main { padding-top: 72px; }
+  .collection-main { padding-top: 72px; }
 
-  .page-hero {
+  .col-hero {
     position: relative;
-    padding: 6rem 2rem 4rem;
+    padding: 6rem 2rem 5rem;
     text-align: center;
     overflow: hidden;
+    background: var(--dark-2);
+    border-bottom: 1px solid rgba(212,175,55,0.08);
   }
 
-  .hero-glow {
+  .col-hero-glow {
     position: absolute;
-    top: 0; left: 50%;
-    transform: translateX(-50%);
-    width: 500px; height: 500px;
-    background: radial-gradient(circle, rgba(212,175,55,0.07) 0%, transparent 70%);
+    top: 50%; left: 50%;
+    transform: translate(-50%,-50%);
+    width: 600px; height: 400px;
+    background: radial-gradient(ellipse, rgba(212,175,55,0.07) 0%, transparent 70%);
+    pointer-events: none;
   }
 
-  .hero-content { position: relative; }
+  .col-hero-inner { position: relative; z-index: 1; }
 
   .eyebrow {
-    font-size: 0.72rem;
-    letter-spacing: 0.35em;
+    font-size: 0.68rem;
+    letter-spacing: 0.38em;
     text-transform: uppercase;
     color: var(--gold);
-    margin-bottom: 1.2rem;
     font-weight: 600;
-  }
-
-  .page-title {
-    font-family: 'Cinzel', serif;
-    font-size: clamp(2.5rem, 7vw, 5rem);
-    font-weight: 900;
-    line-height: 1.0;
     margin-bottom: 1rem;
   }
 
-  .gold {
-    background: linear-gradient(135deg, var(--gold-dark), var(--gold), var(--gold-light));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+  .col-hero h1 {
+    font-family: 'Cinzel', serif;
+    font-size: clamp(2.2rem, 5vw, 4rem);
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 0.75rem;
   }
 
-  .page-sub {
-    color: var(--gray);
-    font-size: 0.95rem;
-  }
+  .col-hero-sub { color: var(--gray); font-size: 0.95rem; }
 
-  .collection-section {
-    padding: 2rem 0 5rem;
-  }
-
-  .collection-inner {
-    max-width: 1280px;
-    margin: 0 auto;
-    padding: 0 2rem;
-  }
+  .col-body { padding: 4rem 0 8rem; }
+  .col-body-inner { max-width: 1280px; margin: 0 auto; padding: 0 2rem; }
 
   .filter-bar {
     display: flex;
-    gap: 0.5rem;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2.5rem;
     flex-wrap: wrap;
-    margin-bottom: 3rem;
-    border-bottom: 1px solid rgba(255,255,255,0.07);
-    padding-bottom: 1.5rem;
   }
 
-  .filter-btn {
+  .filter-label {
+    font-size: 0.7rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.3);
+    flex-shrink: 0;
+  }
+
+  .filter-pills { display: flex; gap: 0.5rem; flex-wrap: wrap; flex: 1; }
+
+  .filter-pill {
     background: none;
     border: 1px solid rgba(255,255,255,0.1);
-    color: var(--gray);
-    padding: 0.5rem 1.2rem;
-    font-size: 0.78rem;
+    color: rgba(255,255,255,0.5);
+    padding: 0.4rem 0.9rem;
+    font-size: 0.72rem;
     letter-spacing: 0.08em;
     text-transform: uppercase;
     cursor: pointer;
     border-radius: 2px;
     transition: all 0.2s;
-    font-family: inherit;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
   }
 
-  .filter-btn:hover, .filter-btn.active {
-    border-color: var(--gold);
-    color: var(--gold);
-    background: rgba(212, 175, 55, 0.05);
+  .filter-pill:hover { border-color: rgba(212,175,55,0.4); color: var(--gold); }
+  .filter-pill.active { background: var(--gold); border-color: var(--gold); color: var(--black); }
+  .pill-count { font-size: 0.6rem; opacity: 0.6; }
+  .filter-pill.active .pill-count { opacity: 0.7; }
+
+  .product-count {
+    margin-left: auto;
+    font-size: 0.72rem;
+    color: rgba(255,255,255,0.3);
+    letter-spacing: 0.08em;
+    white-space: nowrap;
   }
 
   .product-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 1.5rem;
-    margin-bottom: 4rem;
+    margin-bottom: 3rem;
   }
 
-  .product-card {
-    text-decoration: none;
-    color: inherit;
-    display: block;
-  }
+  .product-card { text-decoration: none; color: inherit; display: block; }
 
-  .product-img-wrap {
+  .card-img-wrap {
     position: relative;
     aspect-ratio: 3/4;
     overflow: hidden;
     background: var(--dark-3);
-    margin-bottom: 1rem;
+    margin-bottom: 0.9rem;
+    border: 1px solid rgba(212,175,55,0.06);
+    transition: border-color 0.3s;
   }
 
-  .product-img-wrap img {
-    width: 100%;
-    height: 100%;
+  .product-card:hover .card-img-wrap { border-color: rgba(212,175,55,0.3); }
+
+  .card-img-wrap img {
+    width: 100%; height: 100%;
     object-fit: cover;
-    transition: transform 0.5s ease;
+    transition: transform 0.6s ease;
   }
 
-  .product-card:hover .product-img-wrap img {
-    transform: scale(1.06);
-  }
+  .product-card:hover .card-img-wrap img { transform: scale(1.07); }
 
-  .product-overlay {
+  .card-overlay {
     position: absolute;
-    inset: 0;
-    background: rgba(0,0,0,0.5);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    opacity: 0;
-    transition: opacity 0.3s;
-  }
-
-  .product-overlay span {
+    bottom: 0; left: 0; right: 0;
     background: var(--gold);
     color: var(--black);
-    padding: 0.6rem 1.2rem;
-    font-weight: 700;
-    font-size: 0.75rem;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    border-radius: 2px;
-  }
-
-  .product-card:hover .product-overlay { opacity: 1; }
-
-  .product-tag {
-    position: absolute;
-    top: 0.75rem;
-    left: 0.75rem;
-    background: var(--gold);
-    color: var(--black);
-    font-size: 0.65rem;
+    text-align: center;
+    padding: 0.65rem;
+    font-size: 0.72rem;
     font-weight: 700;
     letter-spacing: 0.1em;
     text-transform: uppercase;
-    padding: 0.25rem 0.6rem;
-    border-radius: 1px;
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
   }
 
-  .product-info {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 0.5rem;
-  }
+  .product-card:hover .card-overlay { transform: translateY(0); }
 
-  .product-category {
-    font-size: 0.65rem;
-    letter-spacing: 0.15em;
+  .card-tag {
+    position: absolute;
+    top: 0.6rem; left: 0.6rem;
+    background: var(--gold);
+    color: var(--black);
+    font-size: 0.6rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
     text-transform: uppercase;
-    color: var(--gold);
-    margin-bottom: 0.3rem;
-    font-weight: 600;
+    padding: 0.2rem 0.5rem;
   }
 
-  .product-info h3 {
-    font-size: 0.85rem;
+  .card-info h3 {
+    font-size: 0.82rem;
     font-weight: 500;
     color: var(--white);
     line-height: 1.4;
+    margin-bottom: 0.4rem;
   }
 
-  .product-desc {
-    font-size: 0.75rem;
-    color: var(--gray);
-    margin-top: 0.3rem;
-    line-height: 1.5;
+  .card-meta { display: flex; justify-content: space-between; align-items: center; }
+
+  .card-cat {
+    font-size: 0.65rem;
+    color: rgba(255,255,255,0.3);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
   }
 
-  .product-price {
+  .card-price {
     font-family: 'Cinzel', serif;
-    font-size: 0.95rem;
+    font-size: 0.88rem;
     color: var(--gold);
     font-weight: 600;
-    white-space: nowrap;
-    flex-shrink: 0;
   }
 
-  .all-cta {
-    text-align: center;
-    padding: 3rem 0;
-    border-top: 1px solid rgba(255,255,255,0.07);
-  }
+  .empty-state { text-align: center; padding: 6rem 2rem; }
+  .empty-symbol { font-size: 4rem; color: rgba(212,175,55,0.2); margin-bottom: 1.5rem; }
+  .empty-state h3 { font-family: 'Cinzel', serif; font-size: 1.3rem; color: var(--white); margin-bottom: 0.75rem; }
+  .empty-state p { color: var(--gray); font-size: 0.9rem; }
 
-  .all-cta p {
-    color: var(--gray);
-    font-size: 0.9rem;
-    margin-bottom: 1.5rem;
-  }
+  .col-cta { text-align: center; margin-top: 2rem; }
 
   .btn-primary {
     background: var(--gold);
     color: var(--black);
     padding: 0.9rem 2.4rem;
     font-weight: 700;
-    font-size: 0.85rem;
+    font-size: 0.82rem;
     letter-spacing: 0.12em;
     text-transform: uppercase;
     text-decoration: none;
     border-radius: 2px;
     display: inline-block;
-    transition: background 0.2s, transform 0.15s;
+    transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
   }
 
   .btn-primary:hover {
     background: var(--gold-light);
     transform: translateY(-2px);
+    box-shadow: 0 8px 32px rgba(212,175,55,0.3);
   }
 
-  @media (max-width: 1100px) {
-    .product-grid { grid-template-columns: repeat(3, 1fr); }
-  }
-
+  @media (max-width: 1024px) { .product-grid { grid-template-columns: repeat(3,1fr); } }
   @media (max-width: 768px) {
-    .product-grid { grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+    .product-grid { grid-template-columns: repeat(2,1fr); gap: 1rem; }
+    .filter-bar { flex-direction: column; align-items: flex-start; }
+    .product-count { margin-left: 0; }
   }
-
-  @media (max-width: 480px) {
-    .product-grid { grid-template-columns: 1fr 1fr; gap: 0.75rem; }
-  }
+  @media (max-width: 480px) { .product-grid { gap: 0.75rem; } }
 </style>
