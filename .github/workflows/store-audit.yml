@@ -1,0 +1,76 @@
+name: Daily Store Audit
+
+on:
+  schedule:
+    # 9:00 AM Eastern Time every day
+    - cron: '0 14 * * *'
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: 'Dry run (report only, no fixes)'
+        type: boolean
+        default: false
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  audit:
+    name: Audit & Auto-Fix Store
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Run Store Audit
+        id: audit
+        env:
+          SHOPIFY_STORE_DOMAIN: ${{ secrets.SHOPIFY_STORE_DOMAIN }}
+          SHOPIFY_ADMIN_TOKEN: ${{ secrets.SHOPIFY_ADMIN_TOKEN }}
+        run: node scripts/store-audit.js
+        continue-on-error: true
+
+      - name: Open Issue if Warnings Found
+        if: steps.audit.outcome == 'failure'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const today = new Date().toLocaleDateString('en-US', {
+              month: 'short', day: 'numeric', year: 'numeric',
+              timeZone: 'America/New_York'
+            });
+
+            // Don't open a duplicate if one is already open
+            const existing = await github.rest.issues.listForRepo({
+              owner: context.repo.owner,
+              repo:  context.repo.repo,
+              labels: 'store-audit',
+              state:  'open',
+            });
+
+            if (existing.data.length === 0) {
+              await github.rest.issues.create({
+                owner: context.repo.owner,
+                repo:  context.repo.repo,
+                title: `🏪 Store Audit: Needs Attention — ${today}`,
+                body: [
+                  '## Store audit found items needing manual review.',
+                  '',
+                  `See the full report in the [Actions run](https://github.com/${context.repo.owner}/${context.repo.repo}/actions/runs/${context.runId}).`,
+                  '',
+                  '**Common fixes:**',
+                  '- Assign a product type to any product listed as missing one',
+                  '- Resolve any auto-fix failures listed in the report',
+                  '',
+                  '_Close this issue once resolved — the audit will open a new one next time it finds problems._',
+                ].join('\n'),
+                labels: ['store-audit'],
+              });
+            }
